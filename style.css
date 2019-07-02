@@ -1,0 +1,193 @@
+/* CSS files add styling rules to your content */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap');
+
+body {
+  font-family: "Roboto Condensed", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin:0;
+  text-align: center;
+}
+
+h1 {
+  color: #9198e5;
+  font-family: "Roboto Condensed", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size:2em;
+}
+
+#user-feelings {
+  display:inline-block;
+  font-size:1em;
+  background-color:whitesmoke;
+  padding:28px;
+  height:50%;
+  width:60%;
+  border-radius:16px;
+  border:1px solid white;
+  box-shadow:0px 6px 20px rgba(0,0,0,0.2);
+}
+
+#user-feelings span {
+  display:block;
+  font-size:4em;
+  margin-bottom:8px;
+}
+
+.submit-feeling {
+  margin-top:24px;
+}
+
+.submit-feeling a{
+  color:#e66465;
+  font-size:1em;
+  font-weight:bold;
+  text-transform:capitalize;
+  transition: all 1.5s ease;
+}
+
+.submit-feeling a:hover {
+  color:purple;
+}
+
+/* styling base for all browsers*/
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 80%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* styling the thumb */
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid white;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: whitesmoke;
+  cursor: pointer;
+  margin-top: -17px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 10px #999; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 10px #999;
+  border: 1px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 10px #999;
+  border: 1px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* 
+  Styling the track 
+*/
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  margin:0 17px;
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  border-radius: 22px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #e66465, #9198e5);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height:100%;
+}
+
+.item {
+  flex-grow: 1;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middle {
+  display: flex;
+  flex-grow: 4;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
